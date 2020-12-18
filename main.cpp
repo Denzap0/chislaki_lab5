@@ -43,19 +43,19 @@ double sympson(double a, double b, int n){
 
 void rungeCriterior(){
     double sum = 0, sumPrev = 0;
-    int n1= 1, n2 = 1;
+    int n = 1;
     do{
         sumPrev = sum;
-        sum = trapezoid(0, 1.0, n1);
-        n1++;
+        sum = trapezoid(0, 1.0, n);
+        n++;
     }while(abs(sum - sum) > 3 * eps);
     cout << sum << endl;
     sum = 0;
     sumPrev = 0;
     do{
         sumPrev = sum;
-        sum = sympson(0, 1.0, n2);
-        n2++;
+        sum = sympson(0, 1.0, n);
+        n++;
     }while(abs(sum - sumPrev) > 15 * eps);
     cout << sum;
 }
