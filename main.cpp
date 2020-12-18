@@ -62,5 +62,4 @@ void rungeCriterior(){
 int main(){
     rungeCriterior();
 }
-
 #undef eps
