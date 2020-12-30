@@ -28,10 +28,10 @@ double trapezoid(double a, double b, double h){
 double sympson(double a, double b, double h){
     double sum = f1(a) + f1(b);
     for (int i = 1; i <= (b - a) / h; i += 2){
-        sum += 4 * f1(a + h * i);
+        sum += 4 * f1(a + i * h);
     }
     for (int i = 2; i < (b - a) / h - 1; i += 2) {
-        sum += 2 * f1(a + h * i);
+        sum += 2 * f1(a + i * h);
     }
     sum *= h/3;
     return  sum;
